@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import music from "@/API/Music.json";
 
 function Home() {
   return (

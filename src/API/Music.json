@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Da tung vo gia",
+    "singer": "Mr.Siro",
+    "path": "./assets/music/song1.mp3",
+    "image": "./assets/imgs/image1.jpg"
+  },
+
+  {
+    "name": "Day dut noi dau",
+    "singer": "Mr.Siro",
+    "path": "./assets/music/song2.mp3",
+    "image": "./assets/imgs/image2.jpg"
+  },
+
+  {
+    "name": "Guong mat la lam",
+    "singer": "Mr.Siro",
+    "path": "./assets/music/song3.mp3",
+    "image": "./assets/imgs/image3.jpg"
+  },
+
+  {
+    "name": "Khoc cung em",
+    "singer": "Mr.Siro",
+    "path": "./assets/music/song4.mp3",
+    "image": "./assets/imgs/image4.jpg"
+  },
+
+  {
+    "name": "Khong can them mot ai nua",
+    "singer": "Mr.Siro",
+    "path": "./assets/music/song5.mp3",
+    "image": "./assets/imgs/image5.jpg"
+  }
+]

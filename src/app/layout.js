@@ -13,11 +13,26 @@ export default function RootLayout({ children }) {
     <div className="main flex p-2">
       {" "}
       <SideBar />
-      <div className="home flex flex-col rounded-lg">
+      <div className="layout flex flex-col rounded-lg">
         <Header />
         {children}
       </div>
       <Footer />
     </div>
+
+    // <html lang="en">
+    //   <body>
+    //     {" "}
+    //     <div className="main flex p-2">
+    //       {" "}
+    //       <SideBar />
+    //       <div className="home flex flex-col rounded-lg">
+    //         <Header />
+    //         {children}
+    //       </div>
+    //       <Footer />
+    //     </div>
+    //   </body>
+    // </html>
   );
 }

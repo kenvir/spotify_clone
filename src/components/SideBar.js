@@ -10,7 +10,9 @@ function SideBar() {
       <section className="bg-[#121212] rounded-lg py-2 px-3 mb-2 h-[18%]">
         <div className="flex items-center py-1 px-3 h-10 gap-5 mb-3 cursor-pointer">
           <GoHomeFill className="text-[22px] font-semibold" />
-          <span className="text-[18px] font-semibold">Trang chủ</span>
+          <Link href="/" className="text-[18px] font-semibold">
+            Trang chủ
+          </Link>
         </div>
         <div className="flex items-center py-1 px-3 h-10 gap-5 mt-3 cursor-pointer">
           <GoSearch className="text-[22px] font-semibold" />

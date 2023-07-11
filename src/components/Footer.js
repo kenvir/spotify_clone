@@ -28,10 +28,10 @@ function Footer() {
                 <RxLoop className="cursor-pointer" />
               </div>
             </div>
-            <div class="playback-bar">
+            <div className="playback-bar">
               <div className="time text-right">-:--</div>
               <div className="w-full h-3 relative">
-                <label class="hidden-visually">
+                <label className="hidden-visually">
                   <input
                     disabled=""
                     type="range"
@@ -39,7 +39,7 @@ function Footer() {
                     max="0"
                     step="0"
                     aria-valuetext="-:--/-:--"
-                    value="0"
+                    defaultValue="0"
                     className="text-[#b3b3b3]"
                   />
                 </label>
@@ -77,18 +77,49 @@ function Footer() {
               <div className="hidden text-white text-[26px] cursor-pointer">
                 <GiSoundOff />
               </div>
-              <div className="text-white text-[26px] cursor-pointer">
+              <div className="text-white text-[26px] mr-3 cursor-pointer">
                 <GiSoundOn />
               </div>
-              <div class="volume">
-                <div class="relative h-3 w-full">
-                  <label class="hidden-visually">
+              {/* <div className="volume">
+                <div className="relative h-3 w-full">
+                  <label className="hidden-visually">
                     Thay đổi âm lượng
                     <input type="range" min="0" max="1" step="0.1" value="1" />
                   </label>
                   <div
                     className="progress-bar"
-                    style={{ "--progress-bar-transform": "100" }}
+                    style={{ "--progress-bar-transform": "0" }}
+                  >
+                    <div
+                      className="progress-bar--time w-full h-1 rounded-full"
+                      data-testid="progress-bar-background"
+                    >
+                      <div className="overflow-hidden">
+                        <div className=""></div>
+                      </div>
+                      <div className="ml-[-6px] left-full absolute z-[100]"></div>
+                    </div>
+                    <div style={{ width: "100%" }}></div>
+                  </div>
+                </div>
+              </div> */}
+              <div className="volume-bar">
+                <div className="w-full h-3 relative">
+                  <label className="hidden-visually">
+                    <input
+                      disabled=""
+                      type="range"
+                      min="0"
+                      max="0"
+                      step="0"
+                      defaultValue="0"
+                      className="text-white"
+                    />
+                  </label>
+                  <div
+                    className="progress-bar"
+                    style={{ "--progress-bar-transform": "100%" }}
+                    data-testid="progress-bar"
                   >
                     <div
                       className="progress-bar--time w-full h-1 rounded-full"
@@ -97,7 +128,7 @@ function Footer() {
                       <div className="overflow-hidden">
                         <div></div>
                       </div>
-                      <div className="ml-[-6px] absolute z-[1]"></div>
+                      <div className="ml-[-6px] left-full absolute z-[1]"></div>
                     </div>
                   </div>
                 </div>

@@ -24,6 +24,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  height: 100vh;
+}
+
+#__next {
+  height: 100%;
 }
 
 /* width */
@@ -80,6 +85,12 @@ body {
   width: 100%;
 }
 
+.layout {
+  height: 87vh;
+  background-color: #212121;
+  border-radius: 8px;
+}
+
 .header {
   grid-area: main-view;
 }
@@ -89,8 +100,6 @@ body {
 }
 
 .home {
-  background-color: #212121;
-  border-radius: 8px;
   grid-area: main-view/main-view/main-view/right-sidebar;
   height: 77vh;
 }
@@ -100,6 +109,11 @@ body {
   ::-webkit-scrollbar-track {
     display: block;
   }
+}
+
+.download {
+  grid-area: main-view/main-view/main-view/right-sidebar;
+  height: 77vh;
 }
 
 /* SideBar */
@@ -245,8 +259,7 @@ header .button {
   width: 1px;
 }
 
-.progress-bar,
-.volume-bar {
+.progress-bar {
   --bg-color: hsla(0, 0%, 100%, 0.3);
   --fg-color: #fff;
   --is-active-fg-color: #1db954;
@@ -271,6 +284,40 @@ header .button {
   transform: translateY(-50%);
 }
 
+.volume-bar {
+  --button-size: 32px;
+  --slider-width: 90px;
+  width: var(--slider-width);
+}
+
 .volume {
   width: 100%;
+}
+
+/* Download */
+
+.imgs {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#1e3264),
+    color-stop(40%, var(--background-base))
+  );
+  background: linear-gradient(180deg, #1e3264 0, var(--background-base) 40%);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  justify-content: center;
 }
