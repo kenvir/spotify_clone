@@ -9,8 +9,8 @@ function SideBar() {
     <sidebar className="sidebar w-[355px] h-full">
       <section className="bg-[#121212] rounded-lg py-2 px-3 mb-2 h-[18%]">
         <div className="flex items-center py-1 px-3 h-10 gap-5 mb-3 cursor-pointer">
-          <GoHomeFill className="text-[22px] font-semibold" />
-          <Link href="/" className="text-[18px] font-semibold">
+          <Link href="/" className="flex text-[18px] font-semibold">
+            <GoHomeFill className="text-[22px] font-semibold mr-5" />
             Trang chủ
           </Link>
         </div>
@@ -40,7 +40,7 @@ function SideBar() {
             </p>
           </div>
           <Link
-            href=""
+            href="/PlayList"
             className="bg-white text-black text-[14px] font-bold rounded-full py-1 px-3 max-w-max"
           >
             Tạo danh sách phát

@@ -143,7 +143,7 @@ body {
 
 .header {
   padding: 16px 24px;
-  background-color: #212121;
+  background-color: transparent;
   border-radius: 8px;
 }
 
@@ -320,4 +320,93 @@ header .button {
   flex-direction: column;
   height: calc(100vh - 64px);
   justify-content: center;
+}
+
+/* PlayList */
+
+.section-playList {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: none;
+  overflow: hidden;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+.playList .header {
+  background: linear-gradient(transparent 0, rgba(0, 0, 0, 0.5) 100%),
+    var(--background-noise);
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.img-playlist {
+  box-shadow: 5px 10px 18px #4e4e4e;
+}
+
+.playList .search input {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border: 0;
+  border-radius: 4px;
+  color: hsla(0, 0%, 100%, 0.7);
+  height: 40px;
+  opacity: 1;
+  padding: 8px 32px;
+  text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity width;
+  transition-property: opacity width;
+  -webkit-transition-timing-function: cubic-bezier(0.3, 0, 0.4, 1);
+  transition-timing-function: cubic-bezier(0.3, 0, 0.4, 1);
+  width: 100%;
+  outline: none;
+}
+
+.search-icon {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 10px;
+  opacity: 1;
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(0.3, 0, 0.4, 1);
+  transition-timing-function: cubic-bezier(0.3, 0, 0.4, 1);
+}
+
+.form-group .avatar-preview {
+  display: none;
+  margin-top: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.img-playlist:hover {
+  .add-avatar {
+    display: none;
+    transition: 0.75s;
+  }
+
+  .form-group .avatar-preview {
+    display: block;
+    transition: 0.75s;
+  }
 }
