@@ -121,6 +121,11 @@ body {
   height: 77vh;
 }
 
+.search {
+  grid-area: main-view/main-view/main-view/right-sidebar;
+  height: 77vh;
+}
+
 /* SideBar */
 
 .sidebar {
@@ -440,3 +445,5 @@ header .button {
 .share-more {
   display: none;
 }
+
+/* Search */

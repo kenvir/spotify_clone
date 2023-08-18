@@ -16,9 +16,12 @@ function SideBar() {
         </div>
         <div className="flex items-center py-1 px-3 h-10 gap-5 mt-3 cursor-pointer">
           <GoSearch className="text-[22px] font-semibold" />
-          <span className="text-[#a3a3a3] text-[18px] font-semibold hover:text-white">
+          <Link
+            href="/Search"
+            className="text-[#a3a3a3] text-[18px] font-semibold hover:text-white"
+          >
             Tìm kiếm
-          </span>
+          </Link>
         </div>
       </section>
       <section className="bg-[#121212] rounded-lg py-2 px-3 sidebar-2">
