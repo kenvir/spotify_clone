@@ -57,7 +57,7 @@ function SideBar() {
             </p>
           </div>
           <Link
-            href=""
+            href="/PodCast"
             className="bg-white text-black text-[14px] font-bold rounded-full py-1 px-3 max-w-max"
           >
             Duyệt xem podcast

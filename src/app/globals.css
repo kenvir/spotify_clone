@@ -116,6 +116,11 @@ body {
   height: 77vh;
 }
 
+.podcast {
+  grid-area: main-view/main-view/main-view/right-sidebar;
+  height: 77vh;
+}
+
 /* SideBar */
 
 .sidebar {
@@ -392,21 +397,46 @@ header .button {
 }
 
 .form-group .avatar-preview {
-  display: none;
-  margin-top: 16px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 232px;
+  height: 232px;
+  border-radius: 4px;
 }
 
-.img-playlist:hover {
-  .add-avatar {
-    display: none;
-    transition: 0.75s;
-  }
+.icon-preview {
+  width: 50px;
+  height: 50px;
+}
 
-  .form-group .avatar-preview {
-    display: block;
-    transition: 0.75s;
+.box {
+  background-color: #282828;
+  border-radius: 4px;
+}
+
+.playList-more {
+  padding: 4px;
+}
+
+.more-list {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+  height: 40px;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 4px;
+    background-color: #393939;
   }
+}
+
+.share:hover {
+  .share-more {
+    display: block;
+  }
+}
+
+.share-more {
+  display: none;
 }

@@ -1,50 +1,58 @@
 import Image from "next/image";
 import Link from "next/link";
 import { RiFolderMusicFill } from "react-icons/ri";
-import { GrClose } from "react-icons/gr";
-import { BiSearch, BiSolidPencil } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { FiMoreHorizontal } from "react-icons/fi";
+import { IoMdArrowDropright } from "react-icons/io";
+import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
+import Tippy from "@tippyjs/react/headless";
 
 function PlayList() {
-  // const [file, setFile] = useState();
+  const [file, setFile] = useState();
+  const [visible, setVisible] = useState(false);
 
-  const handleChange = (preview) => {
-    preview.src = window.URL.createObjectURL(this.files[0]);
+  const handleChange = (e) => {
+    const imgFile = e.target.files[0];
+    const imgURL = URL.createObjectURL(imgFile);
+    setFile(imgURL);
+  };
+
+  const hide = () => {
+    setVisible(false);
   };
 
   return (
     <div className="playList px-6 py-3">
       <div className="gap-6">
         <section className="section-playList flex items-end relative bg-[#535353]">
-          <div className="img-playlist w-[232px] h-[232px] mx-6 bg-[#282828] rounded my-4 relative">
-            <RiFolderMusicFill className="add-avatar text-[30px] text-center w-1/2 h-full m-[0_auto]" />
-            <div className="form-group absolute top-[35%] left-[39%] text-center cursor-pointer">
-              <label
-                className="form-label cursor-pointer"
-                htmlFor="avatar"
-              ></label>
-              <input
-                type="file"
-                id="avatar"
-                name="avatar"
-                hidden
-                // onChange={handleChange}
-                onchange="preview.src=window.URL.createObjectURL(this.files[0])"
-              />
-              <label htmlFor="avatar">
+          <div className="form-group mx-5 mt-5">
+            <label className="form-label" htmlFor="avatar"></label>
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              hidden
+              onChange={handleChange}
+            />
+            <label htmlFor="avatar">
+              {file ? (
                 <Image
-                  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
-                  alt={"logo"}
+                  id="preview"
+                  className="avatar-preview cursor-pointer"
+                  src={file}
+                  alt=""
                   width="0"
                   height="0"
                   sizes="10vw"
-                  className="avatar-preview max-w-[75px] max-h-[75px] cursor-pointer "
-                  id="preview"
-                  priority
                 />
-              </label>
-            </div>
+              ) : (
+                <div className="flex flex-col items-center bg-[#282828] p-[5.75em] rounded cursor-pointer">
+                  <RiFolderMusicFill className="icon-preview" />
+                  <span>Chọn ảnh</span>
+                </div>
+              )}
+            </label>
           </div>
           <div className="flex flex-col gap-4">
             <span className="font-bold text-[14px]">Playlist</span>
@@ -55,12 +63,51 @@ function PlayList() {
               Viet Nguyen
             </span>
           </div>
-          {/* <div className="block bg-[#535353] h-full w-full left-0 right-0 absolute"></div>
-          <div className="header"></div> */}
         </section>
         <section>
           <div className="py-6 border-b-[1px] border-white">
-            <FiMoreHorizontal className="text-[28px] text-[#bababa] cursor-pointer" />
+            <Tippy
+              trigger={"click"}
+              appendTo={() => document.body}
+              interactive={true}
+              onClickOutside={hide}
+              placement="top-start"
+              render={(attrs) => (
+                <div className="box" tabIndex="-1" {...attrs}>
+                  <ul className="playList-more">
+                    <li className="more-list border-b border-b-[#363636]">
+                      Xoá khỏi hồ sơ
+                    </li>
+                    <li className="more-list">Sửa thông tin chi tiết</li>
+                    <li className="more-list">Tạo danh sách phát dự phòng</li>
+                    <li className="more-list">Xoá</li>
+                    <li className="more-list border-b border-b-[#363636]">
+                      Loại bỏ khỏi hồ sơ sở thích của bạn
+                    </li>
+                    <li className="share more-list flex justify-between border-b border-b-[#363636] relative">
+                      Chia sẻ
+                      <IoMdArrowDropright className="text-[22px]" />
+                      <ul className="box share-more p-1 absolute left-[16.5rem] -right-80">
+                        <li className="more-list">
+                          Sao chép đường đến liên kết danh sách phát
+                        </li>
+                        <li className="more-list">Nhúng danh sách phát</li>
+                      </ul>
+                    </li>
+                    <li className="more-list border-b border-b-[#363636]">
+                      Giới thiệu về nội dung đề xuất
+                    </li>
+                    <li className="more-list border-b border-b-[#363636]">
+                      Mở trong ứng dụng dành cho máy tính
+                    </li>
+                  </ul>
+                </div>
+              )}
+            >
+              <div className="w-fit">
+                <FiMoreHorizontal className="text-[28px] text-[#bababa] cursor-pointer" />
+              </div>
+            </Tippy>
           </div>
           <div className="flex justify-between items-center mt-6 py-6">
             <div>
@@ -79,7 +126,7 @@ function PlayList() {
               </div>
             </div>
             <div>
-              <GrClose className="text-[#bababa] text-[24px] cursor-pointer" />
+              <IoCloseOutline className="text-[#bababa] text-[30px] cursor-pointer" />
             </div>
           </div>
         </section>
