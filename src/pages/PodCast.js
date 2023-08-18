@@ -23,7 +23,7 @@ function PodCast() {
           <div className="list">
             <Link
               href="/"
-              className="bg-[#181818] p-4 rounded-lg hover:bg-[#282828]"
+              className="bg-[#181818] p-4 rounded-lg hover:bg-[#282828] transition duration-100"
             >
               <div className="mb-4">
                 <Image
@@ -176,10 +176,7 @@ function PodCast() {
               </div>
               <div>
                 <p className="text-[16px] text-white font-bold pb-1 line-clamp-1">
-                  Tri kỷ cảm xúc
-                </p>
-                <p className="text-[14px] text-[#b3b3b3] font-normal line-clamp-1">
-                  Web5ngay
+                  Podcast hàng đầu
                 </p>
               </div>
             </Link>
@@ -200,10 +197,7 @@ function PodCast() {
               </div>
               <div>
                 <p className="text-[16px] text-white font-bold pb-1 line-clamp-1">
-                  Tri kỷ cảm xúc
-                </p>
-                <p className="text-[14px] text-[#b3b3b3] font-normal line-clamp-1">
-                  Web5ngay
+                  Các câu chuyện
                 </p>
               </div>
             </Link>
@@ -224,10 +218,7 @@ function PodCast() {
               </div>
               <div>
                 <p className="text-[16px] text-white font-bold pb-1 line-clamp-1">
-                  Tri kỷ cảm xúc
-                </p>
-                <p className="text-[14px] text-[#b3b3b3] font-normal line-clamp-1">
-                  Web5ngay
+                  Tội phạm có thật
                 </p>
               </div>
             </Link>
@@ -248,10 +239,7 @@ function PodCast() {
               </div>
               <div>
                 <p className="text-[16px] text-white font-bold pb-1 line-clamp-1">
-                  Tri kỷ cảm xúc
-                </p>
-                <p className="text-[14px] text-[#b3b3b3] font-normal line-clamp-1">
-                  Web5ngay
+                  Tin tức & Chính trị
                 </p>
               </div>
             </Link>
@@ -272,10 +260,7 @@ function PodCast() {
               </div>
               <div>
                 <p className="text-[16px] text-white font-bold pb-1 line-clamp-1">
-                  Tri kỷ cảm xúc
-                </p>
-                <p className="text-[14px] text-[#b3b3b3] font-normal line-clamp-1">
-                  Web5ngay
+                  Hài kịch
                 </p>
               </div>
             </Link>
